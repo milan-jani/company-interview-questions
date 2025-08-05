@@ -1,0 +1,19 @@
+
+class Solution {
+  public:
+  
+    
+    bool search(Node* root, int minVal, int maxVal) {
+        if (root == NULL) return true;
+
+        if (root->data <= minVal || root->data >= maxVal)
+            return false;
+
+        return search(root->left, minVal, root->data) &&
+               search(root->right, root->data, maxVal);
+    }
+
+    bool isBST(Node* root) {
+        return search(root, INT_MIN, INT_MAX);
+    }
+};
