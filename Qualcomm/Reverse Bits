@@ -1,0 +1,13 @@
+class Solution {
+  public:
+    long long reversedBits(long long x) {
+        // code here
+        long long ans=0;
+        for(int i=0;i<32;i++){
+            ans = ans<<1; // shifting ans  to left
+            ans = ans| (x&1); // if there is  one in x(binary) so ORING with ans to add 1 at that position
+            x= x >>1; //shifting right to reduce the length of x 
+        }
+        return ans;
+        }
+};
