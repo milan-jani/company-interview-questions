@@ -1,0 +1,35 @@
+class Solution {
+  public:
+    // Function to check if b is a subset of a
+    bool isSubset(vector<int> &a, vector<int> &b) {
+        // Your code here
+        long long arr[1000001]={0};
+        for(int i=0;i<a.size();i++){
+           // if(arr[a[i]]==0)
+            arr[a[i]]++;
+        }
+        bool ans=false;
+        for(int i=0;i<b.size();i++){
+         
+            if(arr[b[i]]>=1) {
+               arr[b[i]]--;
+               ans=true;}
+            else {
+                ans=false;
+                break;
+            }
+        }
+        
+        // for(int i=0;i<b.size();i++){
+        //     if(arr[b[i]]==2) ans=true;
+        //     else{
+        //         ans=false;
+        //         break;
+                
+        //     }
+           
+        // }
+        return ans;
+        
+    }
+};
