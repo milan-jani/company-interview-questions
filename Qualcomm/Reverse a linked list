@@ -1,0 +1,12 @@
+class Solution {
+ public:
+ Node* reverseList(struct Node* head) {
+ // code here
+ if(head==nullptr || head->next==nullptr) return head;
+
+ Node* rev = reverseList(head->next);
+ head->next->next = head;
+ head->next = nullptr;
+ return rev;
+ }
+};
