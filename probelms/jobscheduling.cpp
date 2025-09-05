@@ -1,13 +1,13 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-struct Job
+s
+int main()
+{truct Job
 {
     int deadline;
     int profit;
 };
-int main()
-{
     int size;
     cout << "Enter total job count";
     cin >> size;
