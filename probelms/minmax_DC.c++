@@ -28,7 +28,7 @@ pair<int, int> mminmax(int arr[], int start,int end) {
     int finalMax = max(left.second, right.second);
 
     return {finalMin, finalMax};
-}
+} //TC:  
 int main() {
     int arr[] = {10, 3, 5, 1, 9, 8};
     // int arr[] = {5,6,10,3,1,8,12};
