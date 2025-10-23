@@ -1,13 +1,13 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-s
-int main()
-{truct Job
+struct Job
+
 {
     int deadline;
     int profit;
 };
+int main(){
     int size;
     cout << "Enter total job count";
     cin >> size;
@@ -71,11 +71,11 @@ int main()
         }
     }
     cout << "total profit" << total_profit << endl;
-    cout << "selected jobs" << endl;
-    for (int i = 0; i < max; i++)
-    {
-        cout << selectedJobs[i].profit << "(" << selectedJobs[i].deadline << ")" << endl;
-    }
+   // cout << "selected jobs" << endl;
+    // for (int i = 0; i < max; i++)
+    // {
+    //     cout << selectedJobs[i].profit << "(" << selectedJobs[i].deadline << ")" << endl;
+    // }
 
     return 0;
 }
