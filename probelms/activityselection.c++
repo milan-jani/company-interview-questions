@@ -28,16 +28,6 @@ void actselc(vector<int> start, vector<int> end) {
     vector<pair<int, int>> selectedActivities;
     selectedActivities.push_back({activities[0].first, activities[0].second});
     int lastEndTime = activities[0].first;
-    // //step 3: iterate through the activities and select the next activity if it starts after the last selected activity ends
-    // for(int i=0; i<activities.size(); i++) {
-    //     if(activities[i].second >= lastEndTime) {
-    //         //store the selected activity based on the index from the start vector
-    //        // int index = find(start.begin(), start.end(), activities[i].second) - start.begin();
-    //         selectedActivities.push_back(index);
-    //         lastEndTime = activities[i].first;
-
-    //     }
-    // }
 
     for(int i=1; i<activities.size(); i++) {
         if(activities[i].second >= lastEndTime) {
@@ -46,11 +36,6 @@ void actselc(vector<int> start, vector<int> end) {
         }
     }
 
-    // //print the selected activities
-    // cout<<"Selected activities: (based on start time's indices) ";
-    // print(selectedActivities);
-    // //print the total number of selected activities
-    // cout<<"Total number of selected activities: "<<selectedActivities.size()<<endl;
     cout<<"Selected activities: ";
     for(pair<int,int> activity : selectedActivities) {
         cout<<"("<<activity.second<<", "<<activity.first<<") ";
