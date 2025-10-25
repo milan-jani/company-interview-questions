@@ -24,8 +24,7 @@ int main() {
     cout << "Enter two numbers: ";
     cin >> x >> y;
     cout << "Product: " << karatsuba(x, y) << endl;
-    char c=120;
-    c=c+10;
-    cout<<c;
+    
+
     return 0;
 }

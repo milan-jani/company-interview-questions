@@ -40,9 +40,9 @@ int main(){
 
     cout << "Sorted array: ";
     printarray(a, size);
-    int b=10&20;
-   cout<<b<<endl;
-   b=10|20;
-   cout<<b;
+   
+ 
+
+  
     return 0;
 }
